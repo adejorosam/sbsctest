@@ -1,9 +1,5 @@
 # SBSC PHP Developer Code Test
 
-
-## Application Description
-This is a simple API built for the sole purpose of finding a lasting solution to the myriads of a accomodation issues in O.O.U Ago-iwoye environs. Students don't find it easy in their search for apartment. It was for that purpose, that was why this API was built.
-
 ## Technologies used
 
 <ul>
