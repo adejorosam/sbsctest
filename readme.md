@@ -72,7 +72,7 @@ $ php artisan serve
 
 
 ## API Routes
-API documentation was created using POSTMAN and can be viewed at <a href="https://documenter.getpostman.com/view/11352997/T1DjkfEH"> API Docs </a>
+API documentation was created using POSTMAN and can be viewed at <a href=""> https://documenter.getpostman.com/view/11352997/T1DjkfEH </a>
 <table>
 <tr><th>HTTP VERB</th><th>ENDPOINT</th><th>FUNCTIONALITY</th></tr>
 <tr><td>POST</td> <td>/api/auth/register</td>  <td>Creates a user</td></tr>
