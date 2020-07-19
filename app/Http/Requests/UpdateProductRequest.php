@@ -25,6 +25,13 @@ class UpdateProductRequest extends FormRequest
     {
         return [
             //
+            'name' => 'required',
+            'quantity' => 'required',
+            'size' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'category_id' => 'required'
         ];
     }
 }

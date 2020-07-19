@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Http\Requests\ProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Jobs\CreateFiftyProducts;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\ProductExport;
-use DB;
+
 
 
 class ProductController extends Controller
@@ -49,9 +50,9 @@ class ProductController extends Controller
     {
         //
         $validated = $request->validated();
-        if($validated['image'] != null){
-                $imagePath = $validated['image'];
-                $imageName = time() . '_' . $imagePath->getClientOriginalName();
+        if($request->hasFile('image')){
+                $image = $validated['image'];
+                $imageName = time() . '_' . $image->getClientOriginalName();
                 $validated['image'] = $imageName;
         }
         $request->image->storeAs('public/images', $imageName);
@@ -107,9 +108,35 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request, $id)
     {
         //
+        $product = Product::findOrFail($id);
+        $validated = $request->validated();
+        if($request->hasFile('image')){
+                $image = $validated['image'];
+                $imageName = time() . '_' . $image->getClientOriginalName();
+                $validated['image'] = $imageName;
+                $request->image->storeAs('public/images', $imageName);
+        }
+        
+        $updatedProduct = $product->update($validated);
+        if($updatedProduct){
+            $response = [
+                "success" => true,
+                "message" => "Product updated successfully",
+                "data" => $product
+            ];
+            return response()->json($response, 201);
+        }
+        else{
+            $response = [
+                "success" => false,
+                "message" => "Error",
+                "data" => null
+            ];
+            return response()->json($response, 401);
+        }
     }
 
     /**

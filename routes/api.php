@@ -26,4 +26,7 @@ Route::get('exportCSV','ProductController@exportCSV');
 Route::get('exportExcel','ProductController@exportExcel');
 Route::get('factorial', 'AlgorithmsController@factorialof13');
 Route::post('searchinsert', 'AlgorithmsController@searchInsert');
-Route::post('sortstates', 'AlgorithmsController@sortArrValue');
+Route::post('sortstates', 'AlgorithmsController@sortArrayValue');
+
+Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.reset');
+Route::post('/password/reset', 'ResetPasswordController@reset');
