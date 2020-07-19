@@ -6,6 +6,7 @@
     <li>PHP 7</li>
     <li>Composer</li>
     <li>MySQL</li>
+    <li>Laravel 5.8</li>
 </ul>
 
 
