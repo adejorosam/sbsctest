@@ -14,8 +14,14 @@ Modern PHP technologies were adopted for this project
 
 Laravel: Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.
 Visit [here](https://laravel.com/) for more information.
+
+
 Mysql - Relational Database System used in project.
+
+
 JWT - used to authorize and authenticate API routes.
+
+
 Mailgun - Email APIs that enable you to send, receive, and track emails.
 
 
