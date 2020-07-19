@@ -6,9 +6,11 @@ This is a simple API built for the sole purpose of finding a lasting solution to
 
 ## Technologies used
 
-PHP 7
-Composer
-MySQL
+<ul>
+    <li>PHP 7</li>
+    <li>Composer</li>
+    <li>MySQL</li>
+</ul>
 
 
 
