@@ -19,9 +19,9 @@ This is a simple API built for the sole purpose of finding a lasting solution to
 ## Installation
 
 ```
-git clone https://github.com/samson1998/Findr-backend.git
+git clone https://github.com/samson1998/sbsctest.git
 
-cd Findr-backend
+cd sbsctest
 
 composer install
 
@@ -29,7 +29,6 @@ cp .env.example .env
 
 php artisan key:generate
 
-php -S 127.0.0.1:8080 -t public/
 ```
 
 
@@ -37,43 +36,34 @@ php -S 127.0.0.1:8080 -t public/
 
 <table>
 <tr><th>HTTP VERB</th><th>ENDPOINT</th><th>FUNCTIONALITY</th></tr>
-<tr><td>POST</td> <td>/api/v1/users</td>  <td>Creates a user</td></tr>
-<tr><td>POST</td> <td>/api/v1/login</td>  <td>Login a user</td></tr>
-<tr><td>PATCH</td> <td>/api/v1/users</td>  <td>Update a user</td></tr>
-<tr><td>GET</td> <td>/api/v1/users</td>  <td>View all users</td></tr>
-<tr><td>GET</td> <td>/api/v1/agents</td>  <td>View all agents</td></tr>
-<tr><td>GET</td> <td>/api/v1/dashboard</td>  <td>View user dashboard</td></tr>
-<tr><td>GET</td> <td>/api/v1/users/{id}</td>  <td>View a particular user</td></tr>
- <tr><td>PATCH</td> <td>/api/v1/users</td>  <td>Update a user</td></tr>
-<tr><td>PATCH</td> <td>/api/v1/users</td>  <td>Upload profile picture</td></tr>
-<tr><td>POST</td> <td>/api/v1/ratehouse/{id}</td>  <td>Rate a listing</td></tr>
-<tr><td>POST</td> <td>/api/v1/rateagent/{id}</td>  <td>Rate an agent</td></tr>
+<tr><td>POST</td> <td>/api/auth/register</td>  <td>Creates a user</td></tr>
+<tr><td>POST</td> <td>/api/auth/login</td>  <td>Login a user</td></tr>
+<tr><td>POST</td> <td>/api/auth/logout</td>  <td>User logout</td></tr>
+<tr><td>POST</td> <td>/api/password/email</td>  <td>Forgot Password</td></tr>
+<tr><td>POST</td> <td>/api/password/reset</td>  <td>Reset Password</td></tr>
+
     
     
-<tr><td>POST</td> <td>/api/v1/apartments</td>  <td>Create an apartment listing</td></tr>
-<tr><td>POST</td> <td>/api/v1/apartments</td>  <td>Get list of all apartments</td></tr>
-<tr><td>GET</td> <td>/api/v1/apartments/{id}</td>  <td>View a particular apartment</td></tr>
-<tr><td>DELETE</td> <td>/api/v1/apartments/{id}</td>  <td>Delete a particular apartment</td></tr>
-<tr><td>GET</td> <td>/api/v1/apartments/{id}</td>  <td>View a particular apartment</td></tr>
-<tr><td>POST</td> <td>/api/v1/results</td>  <td>Filter apartments by price and amount</td></tr>
-<tr><td>GET</td> <td>/api/v1/aweekago</td>  <td>View all houses posted 7 days ago</td></tr>
+<tr><td>POST</td> <td>/api/categories</td>  <td>Create a category</td></tr>
+<tr><td>POST</td> <td>/api/categories</td>  <td>Get list of all categories</td></tr>
+<tr><td>GET</td> <td>/api/categories/{id}</td>  <td>View a particular category</td></tr>
+<tr><td>DELETE</td> <td>/api/categories/{id}</td>  <td>Delete a particular category</td></tr>
+<tr><td>GET</td> <td>/api/categories/{id}</td>  <td>View a particular category</td></tr>
+
+<tr><td>POST</td> <td>/api/products</td>  <td>Create a product</td></tr>
+<tr><td>POST</td> <td>/api/products</td>  <td>Get list of all products</td></tr>
+<tr><td>GET</td> <td>/api/products/{id}</td>  <td>View a particular product</td></tr>
+<tr><td>DELETE</td> <td>/api/products/{id}</td>  <td>Delete a particular product</td></tr>
+<tr><td>GET</td> <td>/api/products/{id}</td>  <td>View a particular product</td></tr>
+<tr><td>POST</td> <td>/api/factoryProducts/</td>  <td>Generate 50 products with Faker</td></tr>
+<tr><td>GET</td> <td>/api/exportCSV</td>  <td>Export to CSV</td></tr>
+<tr><td>GET</td> <td>/api/exportPDF</td>  <td>Export to PDF</td></tr>
 
 
-
-<tr><td>POST</td> <td>/api/v1/comments</td>  <td>Comment on a listing</td></tr>
-<tr><td>PATCH</td> <td>/api/v1/comments/{id}</td>  <td>Update a comment</td></tr>
-<tr><td>DELETE</td> <td>/api/v1/comments/{id}</td>  <td>Delete a particular comment</td></tr>
-
-
-
-<tr><td>POST</td> <td>/api/v1/favorites</td>  <td>Bookmark a listing</td></tr>
-<tr><td>DELETE</td> <td>/api/v1/favorites/{id}</td>  <td>Unbookmark a listing</td></tr>
-<tr><td>GET</td> <td>/api/v1/favorites</td>  <td>View user bookmarks</td></tr>
-
-<tr><td>POST</td> <td>/api/v1/views/{id}</td>  <td>View a listing</td></tr>
-
-
-
+<tr><td>POST</td> <td>/api/factorial</td>  <td>Get the factorial of 13</td></tr>
+<tr><td>POST</td> <td>/api/searchinsert</td>  <td>Search and insert indexes</td></tr>
+<tr><td>POST</td> <td>/api/sortstates</td>  <td>Sort Nigeria states</td></tr>
+<tr><td>POST</td> <td>/api/groupanagrams</td>  <td>Search and insert indexes</td></tr>
 
 
 
