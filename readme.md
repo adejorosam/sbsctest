@@ -52,7 +52,7 @@ php artisan key:generate
 <tr><td>GET</td> <td>/api/products/{id}</td>  <td>View a particular product</td></tr>
 <tr><td>DELETE</td> <td>/api/products/{id}</td>  <td>Delete a particular product</td></tr>
 <tr><td>GET</td> <td>/api/products/{id}</td>  <td>View a particular product</td></tr>
-<tr><td>POST</td> <td>/api/factoryProducts/</td>  <td>Generate 50 products with Faker</td></tr>
+<tr><td>POST</td> <td>/api/factoryProducts</td>  <td>Generate 50 products with Faker</td></tr>
 <tr><td>GET</td> <td>/api/exportCSV</td>  <td>Export to CSV</td></tr>
 <tr><td>GET</td> <td>/api/exportPDF</td>  <td>Export to PDF</td></tr>
 
