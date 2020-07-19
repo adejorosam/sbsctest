@@ -27,7 +27,7 @@ Gmail - Email SMTP client that enable you to send emails.
 ### Step 1.
 - Begin by cloning this repository to your machine 
 ```
-git clone https://github.com/12march/sbsctest.git
+git clone https://github.com/samson1998/sbsctest.git
 ```
 
 - Install dependencies
