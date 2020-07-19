@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -90,7 +90,7 @@ class CategoryController extends Controller
             return response()->json([
                     'success' => true,
                     'data' => $category,
-                    'message' => 'Category saved!'
+                    'message' => 'Category updated successfully!'
                 ]);
         } else {
             return response()->json([

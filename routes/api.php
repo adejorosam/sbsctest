@@ -14,20 +14,20 @@ use Illuminate\Http\Request;
 */
 
 Route::group(['prefix' => 'auth', 'middleware' => ['forceJson']], function () {
-    Route::post('register', 'AuthController@register');
-    Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
+    Route::post('register', 'Api\AuthController@register');
+    Route::post('login', 'Api\AuthController@login');
+    Route::post('logout', 'Api\AuthController@logout');
 });
 
-Route::apiResource('categories', 'CategoryController');
-Route::apiResource('products', 'ProductController');
-Route::get('factoryProducts','ProductController@makeFiftyProducts');
-Route::get('exportCSV','ProductController@exportCSV');
-Route::get('exportExcel','ProductController@exportExcel');
-Route::get('factorial', 'AlgorithmsController@factorialof13');
-Route::post('searchinsert', 'AlgorithmsController@searchInsert');
-Route::post('sortstates', 'AlgorithmsController@sortArrayValues');
-Route::post('groupanagrams', 'AlgorithmsController@groupAnagrams');
+Route::apiResource('categories', 'Api\CategoryController');
+Route::apiResource('products', 'Api\ProductController');
+Route::get('factoryProducts','Api\ProductController@makeFiftyProducts');
+Route::get('exportCSV','Api\ProductController@exportCSV');
+Route::get('exportExcel','Api\ProductController@exportExcel');
+Route::get('factorial', 'Api\AlgorithmsController@factorialof13');
+Route::post('searchinsert', 'Api\AlgorithmsController@searchInsert');
+Route::post('sortstates', 'Api\AlgorithmsController@sortArrayValues');
+Route::post('groupanagrams', 'Api\AlgorithmsController@groupAnagrams');
 
-Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.reset');
-Route::post('/password/reset', 'ResetPasswordController@reset');
+Route::post('/password/email', 'Api\ForgotPasswordController@sendResetLinkEmail')->name('password.reset');
+Route::post('/password/reset', 'Api\ResetPasswordController@reset');
