@@ -24,21 +24,52 @@ Gmail - Email SMTP client that enable you to send emails.
 
 ## Installation
 
+### Step 1.
+- Begin by cloning this repository to your machine 
 ```
-git clone https://github.com/samson1998/sbsctest.git
+git clone https://github.com/12march/sbsctest.git
 ```
+
+- Install dependencies
 ```
-cd sbsctest
+cd name && composer install
 ```
-```
-composer install
-```
+
+- Create enviromental file and variables
 ```
 cp .env.example .env
 ```
+
+- Generate app key
 ```
 php artisan key:generate
 ```
+
+### Step 2
+- Next, create a new database and reference its name and username/password in the projects .env file. Below the database name is "expanse"
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sbsctest
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+- Go to your mailgun account and get your mailgun domain and secret key. choose an email and senders name
+```
+MAILGUN_DOMAIN=****
+MAILGUN_SECRET=****
+MAIL_FROM_ADDRESS=***@***.com
+MAIL_FROM_NAME=*****
+```
+
+### Step 3
+- To start the server, run the command below
+```shell
+$ php artisan serve
+```
+
 
 ## API Routes
 API documentation was created using POSTMAN and can be viewed at <a href="https://documenter.getpostman.com/view/11352997/T1DjkfEH"> API Docs </a>
