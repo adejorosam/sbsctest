@@ -26,19 +26,19 @@ Gmail - Email SMTP client that enable you to send emails.
 
 ```
 git clone https://github.com/samson1998/sbsctest.git
-
-cd sbsctest
-
-composer install
-
-cp .env.example .env
-
-php artisan key:generate
-
-php artisan serve
-
 ```
-
+```
+cd sbsctest
+```
+```
+composer install
+```
+```
+cp .env.example .env
+```
+```
+php artisan key:generate
+```
 
 ## API Routes
 API documentation was created using POSTMAN and can be viewed at <a href="https://documenter.getpostman.com/view/11352997/T1DjkfEH"> API Docs </a>
