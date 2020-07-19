@@ -18,13 +18,9 @@ Visit [here](https://laravel.com/) for more information.
 
 Mysql - Relational Database System used in project.
 
-
 JWT - used to authorize and authenticate API routes.
 
-
-Mailgun - Email APIs that enable you to send, receive, and track emails.
-
-
+Gmail - Email SMTP client that enable you to send emails.
 
 ## Installation
 
@@ -38,6 +34,8 @@ composer install
 cp .env.example .env
 
 php artisan key:generate
+
+php artisan serve
 
 ```
 
