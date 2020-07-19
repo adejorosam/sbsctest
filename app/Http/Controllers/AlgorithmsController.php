@@ -37,13 +37,21 @@ class AlgorithmsController extends Controller
         return (int)$i;
     }
 
-    public function sortArrayValue(Request $request){
+    public function sortArrayValues(Request $request){
         $array = $request->states;
         usort($array, function ($a, $b) { return (strlen($b) <=> strlen($a)); });
         return json_encode($array);  
     }
 
-    // public function groupAnagrams(Request $request){
-    //     $array = $request->
-    // }
+    public function groupAnagrams(Request $request){
+        $data = $request->array;
+        $map = [];
+        foreach($data as $str){
+            $strSplit = str_split($str);
+            sort($strSplit);
+            $strSplit = implode("",$strSplit);
+            $map[$strSplit][] = $str; 
+        }
+        return json_encode($map);
+    }
 }

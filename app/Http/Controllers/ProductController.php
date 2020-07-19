@@ -169,7 +169,7 @@ class ProductController extends Controller
     public function makeFiftyProducts(){
         $job = (new CreateFiftyProducts());
         dispatch($job);
-        echo 'Product created';
+        echo 'Products created';
     }
 
     /**
