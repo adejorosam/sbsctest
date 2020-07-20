@@ -26,7 +26,6 @@ class AlgorithmsController extends Controller
   
         while($i<=$j){
             $mid = ($i+$j)/2;
-    
             if($target > $nums[$mid]){
                 $i=$mid+1;
             }else if($target < $nums[$mid]){
@@ -46,11 +45,17 @@ class AlgorithmsController extends Controller
 
     public function groupAnagrams(Request $request){
         $data = $request->array;
+        // Initialize an empty array
         $map = [];
         foreach($data as $str){
-            $strSplit = str_split($str);
+            //Split the string to get an array of individual characters.
+            $strSplit = str_split($str); 
+            // Sort them in ascending/non-decreasing order.
             sort($strSplit);
+            // Implode it back to get it as a sorted string.
             $strSplit = implode("",$strSplit);
+            // put the current string in an array where sorted key is the actual key 
+            // where the current anagram belongs
             $map[$strSplit][] = $str; 
         }
         return json_encode($map);
