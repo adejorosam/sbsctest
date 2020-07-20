@@ -21,20 +21,28 @@ class AlgorithmsController extends Controller
 
         $nums = $request['numbers'];
         $target = $request['target'];
-        $i = 0; 
-        $j = sizeOf($nums)-1;
-  
-        while($i<=$j){
-            $mid = ($i+$j)/2;
+        $low = 0; 
+        $high = sizeOf($nums)-1;
+        
+        while($low <= $high){
+            // Divide the length of the array by 2(lower bound + upper bound / 2)
+            $mid = ($low + $high)/2;
+            // Compare the target element with the elements in the array
             if($target > $nums[$mid]){
-                $i=$mid+1;
+                // If it's higher, add one to the index
+                $low = $mid+1;
+            // Compare the target element with the elements in the array
             }else if($target < $nums[$mid]){
-                $j=$mid-1;
+                // If it's lower, subtract one from the index
+                $high = $mid-1;
             }else{
+                // If the target element is equals to the element in the array
+                // return the index
                 return (int)$mid;
             }
         }
-        return (int)$i;
+        // If the element is not found, return the low index
+        return (int)$low;
     }
 
     public function sortArrayValues(Request $request){
